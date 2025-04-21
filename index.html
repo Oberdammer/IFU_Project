@@ -72,6 +72,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: 8%;
     }
 
     .button_icon img {
@@ -82,19 +83,22 @@
     }
 
     .button_text {
-  display: flex;
-  height: 25%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: clamp(0.6rem, 2.5vw, 2rem);
-  font-weight: bold;
-  margin-bottom: 6%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+      display: flex;
+      height: 25%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 6%;
+      /* Responsive text sizing */
+      font-size: clamp(0.7rem, 2vw, 0.9rem);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 4px;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
