@@ -1,3 +1,6 @@
+document.querySelector('.back').addEventListener('click', function() 
+{window.location.href = 'index.html'})
+
 document.addEventListener('DOMContentLoaded', function () {
   const notification = document.querySelector('.notification');
   const chatOverlay = document.querySelector('.chat-overlay');
