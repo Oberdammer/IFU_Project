@@ -61,31 +61,49 @@
       border: 1px solid black;
       border-radius: 20px;
       background-color: white;
-      margin-top: -5vh;
+      margin-top: -7vh;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     
     .slides {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.8s ease-in-out;
       width: 300%; /* 100% per slide × 3 slides */
       height: 100%;
+      background: linear-gradient(to bottom right, #ffffff, #f6f6f6);
     }
     
     .slide {
-      flex: 0 0 33.333%; /* Each slide takes exactly 1/3 of slides container */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 5.2vh;
-      font-weight: bold;
-      text-align: center;
-      box-sizing: border-box;
-      width: 33.333%;
-      height: 100%;
-    }
+  flex: 0 0 33.333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  font-size: 2.5vh;
+  text-align: center;
+  box-sizing: border-box;
+  width: 33.333%;
+  height: 100%;
+}
+
+.slide-title {
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  color: #333;
+}
+
+.slide-text {
+  font-size: 2.4vh;
+  line-height: 1.4;
+  color: #444;
+  padding: 0 1vh;
+}
+
     
     .navigation {
-      margin-top: 5vh;
+      margin-top: 6vh;
       height: 6%;
       display: flex;
       align-items: center;
@@ -108,7 +126,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      line-height: 1; /* Add this to prevent line-height issues */
+      padding: 0; /* Ensure no padding is affecting alignment */
     }
+.prev:hover, .next:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
     
     .dots {
       display: flex;
@@ -118,16 +144,18 @@
     }
     
     .dot {
-      width: 20%;
+      width: 18%;
       aspect-ratio: 1/1;
       background-color: gray;
       border-radius: 50%;
       cursor: pointer;
       margin: 0 5%;
+      transition: background-color 0.5s ease, transform 0.3s ease;
     }
     
     .dot.active {
       background-color: black;
+      transform: scale(1.3);
     }
     
     .back {
@@ -158,9 +186,29 @@
     <div class="content">
       <div class="slider">
         <div class="slides">
-          <div class="slide">Slide 1</div>
-          <div class="slide">Slide 2</div>
-          <div class="slide">Slide 3</div>
+          <div class="slide">
+            <div class="slide-title">Withdraw & Deposit Money</div>
+            <div class="slide-text">
+              Easily withdraw or deposit cash during your regular grocery shopping.
+              REWE Banking offers trusted in-store ATMs in collaboration with Deutsche Bank and Paysafe —
+              saving you an extra trip to the bank.
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-title">Domestic & International Transfers</div>
+            <div class="slide-text">
+              Transfer money locally or internationally with ease. Whether you're sending funds to family
+              or paying a bill, REWE’s partnership with Paysafe enables secure transactions right from
+              your neighborhood store.
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-title">Print Financial Statements</div>
+            <div class="slide-text">
+              Need a bank statement for your records? Print your latest financial overviews conveniently
+              while you shop. No apps, no waiting – just simple, secure, and fast access to your financial info.
+            </div>
+          </div>
         </div>
       </div>
       
