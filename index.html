@@ -95,6 +95,22 @@
       font-weight: bold;
       margin-bottom: 6%;
     }
+    .qr_holder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30vh;
+      aspect-ratio: 1 / 1;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .qr_holder img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      margin-top: 6%;
+    }
   </style>
 </head>
 <body>
@@ -120,6 +136,7 @@
       </button>
     </div>
   </div>
+  <div class="qr_holder"><img src="images/qrcode.png" alt="QR-Code"></div>
 <script src="mainpage.js"></script>
 </body>
 </html>
