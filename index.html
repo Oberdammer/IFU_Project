@@ -16,6 +16,7 @@
       background: linear-gradient(135deg, #e0eafc, #cfdef3); /* light blue tones */
     }
     .phone {
+      z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -97,6 +98,7 @@
     }
 
     .qr_holder {
+      z-index: 1;
       position: absolute;
       top: 0;
       left: 0;
@@ -115,20 +117,6 @@
   </style>
 </head>
 <body>
-  <div id="orientation-warning" style="
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: white;
-  color: black;
-  font-size: 5vh;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 40vh;
-">
-  Please rotate your device to landscape mode.
-</div>
   <div class="phone">
     <div class="phone-header">REWE</div>
 
