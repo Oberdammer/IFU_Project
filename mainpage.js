@@ -9,3 +9,18 @@ document.querySelector('.button-grid button:nth-child(3)').addEventListener('cli
 
 document.querySelector('.button-grid button:nth-child(4)').addEventListener('click', function() 
 {window.location.href = 'h_charging.html'})
+
+function checkOrientation() {
+    const warning = document.getElementById("orientation-warning");
+    if (window.innerHeight > window.innerWidth) {
+      // Portrait mode
+      warning.style.display = "block";
+    } else {
+      // Landscape mode
+      warning.style.display = "none";
+    }
+  }
+  
+  window.addEventListener("resize", checkOrientation);
+  window.addEventListener("orientationchange", checkOrientation);
+  window.addEventListener("load", checkOrientation);
